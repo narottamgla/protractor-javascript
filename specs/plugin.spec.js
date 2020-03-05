@@ -1,13 +1,31 @@
 var pluginPg = require('./../pages/pluginPage.po');
 //var dataProvider= require ("./../data/dataProvider");
 var  BrowserUtil = require("./../utils/browser.util");
+var  emailUtil = require("../utils/CommonUtils");
+var linkify = require('linkifyjs');
+
 
 describe('OasisDex-MetaMask Block & Unblock', () => {
     
    // var pluginPg = new pluginPage();
-    beforeEach(() => {
+    beforeEach(async() => {
         browser.waitForAngularEnabled(false);
     });
+
+    it('Access gmail email and open new browser tab', async() => {
+        console.log();
+       // let msg = await emailUtil.getConfirmationEmailByCredentials("UserEmail","UserPassword","Critical security alert");
+       // let url = emailUtil.extractData(msg.toString(), "<a href", "style=");
+       // await console.log("Final URL::"+ url);
+        //await console.log("URL::"+linkify.find(msg)[0].value);
+
+       // await console.log("Msg reading done"+msg);
+
+        let url = "https://google.com";
+        await emailUtil.openPageInNewTab(url);
+        browser.sleep(5000);
+    });
+        
 
     it('should able to access link using metamask extension', (done) => {
         

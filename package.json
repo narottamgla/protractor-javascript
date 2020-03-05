@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "jasmine": "^2.6.2",
-    "jasmine-spec-reporter": "^4.1.0"
+    "jasmine-spec-reporter": "^4.1.0",
+    "linkifyjs": "^2.1.9"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "imap-simple": "^4.3.0"
+  }
 }
